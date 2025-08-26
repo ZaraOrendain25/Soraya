@@ -8,7 +8,7 @@ public class practica {
 		
 		int[] numeros = new int[15];
 		int num;
-		int contador_neg = 0;
+		int contador_neg = 0, contador_imp = 0, resultado_promedio = 0, suma_positivos = 0;
 		Scanner captura = new Scanner(System.in);
 		
 		for(int x = 0; x < numeros.length;) {
@@ -29,9 +29,16 @@ public class practica {
 			if(numeros[i] < 0) {
 				contador_neg += 1;
 			}
-		}
+			if(numeros[i] %2 != 0) {
+				suma_positivos += numeros[i];
+				contador_imp += 1;
 				
-		
+			}
+			
+		}
+		resultado_promedio = suma_positivos / contador_imp;
+		System.out.println("el resultado es de negativos es: " +contador_neg);
+		System.out.println("el promedio es: " +resultado_promedio);
 		
 	}
 
